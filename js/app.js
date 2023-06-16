@@ -93,9 +93,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
+function sumArray(sumArray) {
   //eslint-disable-line
+  let total = sum(sumArray[0], sumArray[1]);
+  let finalTotal = sum(total[0], sumArray[2]);
+  let message = `${sumArray[0]}, ${sumArray[1]}, ${sumArray[2]} was passed in as an array of numbers, and ${finalTotal[0]} is their sum.`;
+  return [total, finalTotal, message];
 }
+sumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
